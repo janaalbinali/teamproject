@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}
+List
+{% endblock title %}
+
+{% block content %}
+
+<br>
+<div class="row">
+    {% for team in teams %}
+    <div class="col-md-4">
+        <div class="card my-card">
+          <div class="card-body">
+            <h5 class="card-title">{{team.name}}</h5>
+            <p class="card-text">{{team.points}}</p>
+          </div>
+          <li class="list-group list-group-flush">
+            <li class="list-group-item text-center">
+            </li>
+          </li>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}
